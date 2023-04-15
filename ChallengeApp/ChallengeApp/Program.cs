@@ -1,19 +1,32 @@
-﻿var name = "Ewa";
+﻿var Name = "Ewa";
 var Age = 33;
-bool kobieta = true;
-var resualt1 = "Kobirta poniżej 30 lat";
-var resualt2 = "Ewa lat 33";
-var resualt3 = "Mężczyzna nie pełnoletni";
+bool female = true;
+var resault1 = "Kobieta poniżej 30lat";
+var resault2 = "Ewa 33 lat";
+var resault3 ="Niepełnoletni Mężczyzna";
+var resault4 = "Mężczyzna powyżej 50 lat";
 
-if (kobieta == false)
+if(female = true && Age == 33)
 {
-    Console.WriteLine(resualt3);
+    if (Name == "Ewa")
+    {
+        Console.WriteLine(resault2);
+    }
+    else if (!(Name == "Ewa") && Age < 30)
+    {
+        Console.WriteLine(resault1);
+    }
 }
-if (kobieta == true && Age < 30)
+
+else
 {
-    Console.WriteLine(resualt1);
+    if(female == false && Age <18)
+    {
+        Console.WriteLine(resault3);   
+    }
+    else if (female == false && Age<50)
+    {
+        Console.WriteLine(resault4);
+    }
 }
-else if (name == "Ewa" && Age == 33)
-{
-    Console.WriteLine(resualt2);
-}
+    
