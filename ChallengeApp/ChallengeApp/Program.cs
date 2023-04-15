@@ -3,12 +3,12 @@ var Age = 33;
 bool female = true;
 var resault1 = "Kobieta poniżej 30lat";
 var resault2 = "Ewa 33 lat";
-var resault3 ="Niepełnoletni Mężczyzna";
+var resault3 = "Niepełnoletni Mężczyzna";
 var resault4 = "Mężczyzna powyżej 50 lat";
 
-if(female = true && Age == 33)
+if (female == true)
 {
-    if (Name == "Ewa")
+    if (Name == "Ewa" && Age == 33)
     {
         Console.WriteLine(resault2);
     }
@@ -20,13 +20,13 @@ if(female = true && Age == 33)
 
 else
 {
-    if(female == false && Age <18)
+    if (female == false && Age < 18)
     {
-        Console.WriteLine(resault3);   
+        Console.WriteLine(resault3);
     }
-    else if (female == false && Age<50)
+    else if (female == false && Age < 50)
     {
         Console.WriteLine(resault4);
     }
 }
-    
+
