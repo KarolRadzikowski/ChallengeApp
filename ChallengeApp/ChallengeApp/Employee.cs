@@ -32,12 +32,14 @@ namespace ChallengeApp
             }
         }
 
-        private List<int> scoreList = new List<int>();
 
         public void AddScore(int rating)
         {
             this.Score += rating;
+            this.score.Add(rating);
         }
 
+
+      
     }
 }
