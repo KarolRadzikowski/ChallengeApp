@@ -57,5 +57,35 @@ namespace ChallengeApp.Tests
 
             Assert.AreEqual(6, statistic.Average);
         }
+        [Test]
+        public void ICheckIfItCorrectlyAddsThePointsAssignedToTheLettersAndDisplaysTheLargestValue()
+        {
+            Employee employee = new Employee("Karol", "Radzikowski");
+            employee.AddGrades('A');
+            employee.AddGrades('a');
+            employee.AddGrades('b');
+            employee.AddGrades('c');
+            employee.AddGrades('d');
+            employee.AddGrades('e');
+
+            var statistic = employee.GetStatistics();
+
+            Assert.AreEqual(100, statistic.Max);
+        }
+        [Test]
+        public void ICheckIfItGivesTheAverageResultsCorrectly()
+        {
+            Employee employee = new Employee("Jan", "Bek");
+            employee.AddGrades('B');
+            employee.AddGrades(80);
+            employee.AddGrades(20);
+            employee.AddGrades('E');
+
+            var statistic = employee.GetStatistics();
+
+            Assert.AreEqual(50, statistic.Average);
+            Assert.AreEqual('C', statistic.AverangeLetter);
+        }
     }
+
 }
