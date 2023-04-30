@@ -1,7 +1,7 @@
 ﻿using ChallengeApp;
 Console.WriteLine("Witamy w programie oceny pracowników: Employee-XYZ");
 Console.WriteLine("////////////////////////////////////////////////////");
-Employee employee = new Employee("Karol", "Radzikowski");
+Employee employee = new Employee("Karol", "Radzikowski","Mężczyzna");
 while(true)
 {
     Console.WriteLine("Podaj kolejną ocene pracownika:");

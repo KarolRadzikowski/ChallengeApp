@@ -10,7 +10,7 @@ namespace ChallengeApp.Tests
 
         public void ShowsMinValue()
         {
-            Employee employee1 = new Employee("Jan", "Kowalski");
+            Employee employee1 = new Employee("Jan", "Kowalski", "Mê¿czyzna");
 
             employee1.AddGrades(5);
             employee1.AddGrades(10);
@@ -29,7 +29,7 @@ namespace ChallengeApp.Tests
 
         public void ShowsMaxValue()
         {
-            Employee employee1 = new Employee("Jan", "Kowalski");
+            Employee employee1 = new Employee("Jan", "Kowalski", "Mê¿czyzna");
 
             employee1.AddGrades(5);
             employee1.AddGrades(10);
@@ -46,7 +46,7 @@ namespace ChallengeApp.Tests
 
         public void ShowAverageValue()
         {
-            Employee employee1 = new Employee("Jan", "Kowalski");
+            Employee employee1 = new Employee("Jan", "Kowalski", "Mê¿czyzna");
 
             employee1.AddGrades(5);
             employee1.AddGrades(10);
@@ -60,7 +60,7 @@ namespace ChallengeApp.Tests
         [Test]
         public void ICheckIfItCorrectlyAddsThePointsAssignedToTheLettersAndDisplaysTheLargestValue()
         {
-            Employee employee = new Employee("Karol", "Radzikowski");
+            Employee employee = new Employee("Karol", "Radzikowski", "Mê¿czyzna");
             employee.AddGrades('A');
             employee.AddGrades('a');
             employee.AddGrades('b');
@@ -75,7 +75,7 @@ namespace ChallengeApp.Tests
         [Test]
         public void ICheckIfItGivesTheAverageResultsCorrectly()
         {
-            Employee employee = new Employee("Jan", "Bek");
+            Employee employee = new Employee("Jan", "Bek", "Mê¿czyzna");
             employee.AddGrades('B');
             employee.AddGrades(80);
             employee.AddGrades(20);
