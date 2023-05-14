@@ -3,6 +3,7 @@ namespace ChallengeApp
 {
     public class EmployeeInMemory : EmployeeBase
     {
+        public event GradeAddedDelegate GradeAdded;
         public EmployeeInMemory(string name, string surename, string gender) 
             : base(name, surename, gender)
         {
@@ -14,6 +15,11 @@ namespace ChallengeApp
             if (grade >= 0 && grade <= 100)
             {
                 this.grades.Add(grade);
+                if(GradeAdded != null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }
+                    
             }
             else
             {

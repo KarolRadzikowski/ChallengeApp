@@ -6,6 +6,7 @@ namespace ChallengeApp
 {
     public class EmployeeInFile : EmployeeBase
     {
+        public event GradeAddedDelegate GradeAdded;
         public EmployeeInFile(string name, string surename, string gender)
             : base(name, surename, gender)
         {
@@ -19,6 +20,10 @@ namespace ChallengeApp
                 using (var writer = File.AppendText(FileName))
                 {
                     writer.Write(grade);
+                    if(GradeAdded != null)
+                    { 
+                        GradeAdded(this, new EventArgs());
+                    }
                 }
             }
             else
